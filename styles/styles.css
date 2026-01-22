@@ -748,6 +748,33 @@ section {
   margin-bottom: var(--spacing-md);
 }
 
+/* Name float-up animation */
+.hero__name {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: floatUp 0.6s ease-out forwards;
+}
+
+.hero__name--first {
+  animation-delay: 0.1s;
+}
+
+.hero__name--last {
+  animation-delay: 0.25s;
+}
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero__subtitle {
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
@@ -1275,5 +1302,11 @@ section:not(.skills-highlight) .skill-item {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* Ensure animated elements are visible without animation */
+  .hero__name {
+    opacity: 1;
+    transform: none;
   }
 }
