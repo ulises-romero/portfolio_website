@@ -1,0 +1,9 @@
+# robots.txt for Portfolio Website
+# https://yourusername.github.io/
+
+# Allow all crawlers to access all content
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourusername.github.io/sitemap.xml
